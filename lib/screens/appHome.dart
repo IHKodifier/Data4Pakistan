@@ -45,7 +45,8 @@ class _AppHomePageState extends State<AppHomePage>
           'Compare',
           style: TextStyle(fontSize: 10),
         ),
-        icon: Icon(Icons.compare),
+        icon: Icon(Icons.compare,
+        size: 35,),
       )
     ];
     _tabViews = [

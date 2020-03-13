@@ -10,8 +10,8 @@ class _DistrictProfilePageState extends State<DistrictProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Container( 
-      color: Colors.purple.shade100,
-      child: Center(child: Text('Dsitrict profiles',style: Theme.of(context).textTheme.display2.copyWith(color: Colors.black),)),
+      color: Colors.purple.shade50,
+      child: Center(child: Text('Dsitrict profiles',style: Theme.of(context).textTheme.display1,)),
       
     );
   }

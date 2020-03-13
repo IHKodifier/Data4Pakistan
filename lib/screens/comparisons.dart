@@ -11,8 +11,8 @@ class _ComparisonsPageState extends State<ComparisonsPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.purple.shade300,
-      child: Center(child: Text('Comparisons ',style: Theme.of(context).textTheme.display2.copyWith(color: Colors.white),)),
+      color: Colors.purple.shade200,
+      child: Center(child: Text('Comparisons ',style: Theme.of(context).textTheme.display1,)),
       
     );
   }
