@@ -21,13 +21,31 @@ class _AppHomePageState extends State<AppHomePage>
     _tabcontroller = TabController(length: 3, vsync: this);
     _tabs = [
       Tab(
-        child: Text('Dsitrict Profiles'),
+        icon: Icon(
+          Icons.library_books,
+          size: 35,
+        ),
+        child: Text(
+          'Dsitrict Profiles',
+          style: TextStyle(fontSize: 10),
+        ),
       ),
       Tab(
-        text: 'Rankings',
+        icon: Icon(
+          Icons.sort,
+          size: 35,
+        ),
+        child: Text(
+          'Rankings',
+          style: TextStyle(fontSize: 10),
+        ),
       ),
       Tab(
-        text: 'Comparison',
+        child: Text(
+          'Compare',
+          style: TextStyle(fontSize: 10),
+        ),
+        icon: Icon(Icons.compare),
       )
     ];
     _tabViews = [
@@ -62,17 +80,18 @@ class _AppHomePageState extends State<AppHomePage>
             child: TabBar(
               tabs: _tabs,
               controller: _tabcontroller,
-              indicatorSize: TabBarIndicatorSize.label,
-              indicatorWeight: 10.0,
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorWeight: 6.0,
+
               indicatorColor: Theme.of(context).accentColor,
               // labelColor: Theme.of(context).accentColor,
               // isScrollable: true,
             ),
           )),
-    body: TabBarView(
-      children: _tabViews,
-      controller: _tabcontroller
-      ,),
+      body: TabBarView(
+        children: _tabViews,
+        controller: _tabcontroller,
+      ),
     );
   }
 }
