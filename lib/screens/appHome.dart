@@ -1,3 +1,4 @@
+import 'package:data4pakistan/screens/buildData.dart';
 import 'package:data4pakistan/screens/comparisons.dart';
 import 'package:data4pakistan/screens/districtProfile.dart';
 import 'package:data4pakistan/screens/rankings.dart';
@@ -18,15 +19,25 @@ class _AppHomePageState extends State<AppHomePage>
   void initState() {
     // TODO: implement initState
     super.initState();
-    _tabcontroller = TabController(length: 3, vsync: this);
+    _tabcontroller = TabController(length: 4, vsync: this);
     _tabs = [
+       Tab(
+        icon: Icon(
+          Icons.data_usage,
+          size: 30,
+        ),
+        // child: Text(
+        //   'Upload',
+        //   style: TextStyle(fontSize: 10),
+        // ),
+      ),
       Tab(
         icon: Icon(
           Icons.library_books,
           size: 35,
         ),
         child: Text(
-          'Dsitrict Profiles',
+          'Dsitricts',
           style: TextStyle(fontSize: 10),
         ),
       ),
@@ -50,9 +61,10 @@ class _AppHomePageState extends State<AppHomePage>
       )
     ];
     _tabViews = [
+      BuildData(),
       DistrictProfilePage(),
       RankingsPage(),
-      ComparisonsPage(),
+      ComparisonsPage()
     ];
   }
 

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "116842757019",
+    "firebase_url": "https://data4pakistan-23ebb.firebaseio.com",
+    "project_id": "data4pakistan-23ebb",
+    "storage_bucket": "data4pakistan-23ebb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116842757019:android:d6d1d7ecba9c22f37dff3e",
+        "android_client_info": {
+          "package_name": "com.example.data4pakistan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116842757019-mbl9tb4gskbbsp9bbt25r97gsatt26j7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3KqRUEdUsH08060OWOHoWPH8waF5jFSs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116842757019-mbl9tb4gskbbsp9bbt25r97gsatt26j7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
