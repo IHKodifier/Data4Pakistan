@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -25,28 +27,23 @@ class _BuildDataState extends State<BuildData> {
                       .copyWith(color: Colors.white),
                 ),
                 onPressed: () {
-                  _uploadData();
+                  _uploadData(context);
                 }),
             _str != '' ? Text(_str) : Text(' '),
           ],
         ));
   }
 
-  void _uploadData() {
-    //upload a small json for testing
-    Firestore.instance.collection('/districts').add({
-      "Province": "Balochistan",
-      "District": "Awaran",
-      "Year": 2004,
-      "Poverty Rate (%)": 57,
-      "National poverty rank (N)": 63,
-      "Provincial poverty rank (N)": 9,
-      "Number of poor (1,000s)": 63,
-      "Access to improved drinking water (% of population)": "",
-      "Access to piped water (% of population)": "",
-      "Access to improved drinking water, excl": {
-        " piped water (% of population)": ""
-      }
+  void _uploadData(BuildContext context) async {
+    String jsonString = await DefaultAssetBundle.of(context)
+        .loadString('assets/data/Data4Pakistan.json');
+    var myMap = Map();
+    List<dynamic> _raw = jsonDecode(jsonString);
+// _raw.map(f)
+    _raw.forEach((element) {
+      Firestore.instance.collection('/districts').add(element);
     });
+
+    print(_raw[1].toString());
   }
 }
